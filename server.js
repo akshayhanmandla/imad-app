@@ -5,6 +5,13 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne={
+  title:'Akshaykumar Hanmandla',
+  heading:'I am web and application developer',
+  content:`<h2>I developed a lot of applications</h2>
+            <h2>I worked as web developer intern at idealvillage</h2>`
+};
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
